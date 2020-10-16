@@ -149,30 +149,27 @@ $queryResultShow=mysqli_query($database->link,$sql);
                 <div class="card-body">
                     <div class="row">
                         <?php
-                        $d=mysqli_fetch_assoc($queryResult4);
+                       /* $d=mysqli_fetch_assoc($queryResult4);
                         if(isset($d)==""){
                             echo '';
                         }else{
-                            $categoryList=[];
+                            $categoryList=[];*/
                             while ($d=mysqli_fetch_assoc($queryResult2)){
-                                $categoryList[]=$d['category'];
+                              /*  $categoryList[]=$d['category'];
                             }
-                            $uniqueCategory=array_unique($categoryList);
+                            $uniqueCategory=array_unique($categoryList);*/
                             ?>
-                            <?php for ($i=0;$i<count($uniqueCategory);$i++) {?>
+                           <!-- --><?php /*for ($i=0;$i<count($uniqueCategory);$i++) {*/?>
                                 <div class="col-lg-6">
                                     <ul class="list-unstyled mb-0">
                                         <li>
-                                            <a href="categorywise-blog.php?category=<?php echo $uniqueCategory[$i];?>"><?php
-
-                                                echo $uniqueCategory[$i];
-                                                ?>
+                                            <a href="categorywise-blog.php?category=<?php echo $d['category'];?>"><?php echo $d['category'];?>
 
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
-                            <?php }}?>
+                            <?php }/*}*/?>
                     </div>
                 </div>
             </div>

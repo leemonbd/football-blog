@@ -144,7 +144,7 @@ $queryResultShow=mysqli_query($database->link,$sql);
 
 
 
-<?php include '../includes/footer-sticky.php'?>
+<?php /*include '../includes/footer-sticky.php'*/?>
 <?php /*include '../includes/modal.php'*/?>
 
 <!-- Bootstrap core JavaScript -->

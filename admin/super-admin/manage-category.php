@@ -10,13 +10,13 @@ if(isset($_GET['logout'])){
 }
 
 
-if(isset($_GET['delete'])){
+if(isset($_GET['deletec'])){
     $deleteCategoryByID=$_GET['id'];
     $validation->deleteCategoryByID($deleteCategoryByID);
 }
 
-if(isset($_GET['delete'])){
-    $deleteSubCategoryByID=$_GET['id'];
+if(isset($_GET['deletes'])){
+    $deleteSubCategoryByID=$_GET['subCategoryId'];
     $validation->deleteSubCategoryByID($deleteSubCategoryByID);
 }
 $showSubCategoryInMainSiteQueryResult=$validation->showSubCategoryInMainSite();
@@ -73,7 +73,7 @@ $showPopularSubCategoryInMainSiteQueryResult=$validation->showPopularSubCategori
                     </td>
                     <td>
                         <a href="edit-category.php?id=<?php echo $showSubCategories['id']?>">Edit</a>
-                        <a href="?delete=true&subCategoryId=<?php echo $showSubCategories['id']?>">Delete</a>
+                        <a href="?deletes=true&subCategoryId=<?php echo $showSubCategories['id']?>">Delete</a>
                     </td>
                 </tr>
                 <?php }?>
@@ -135,7 +135,7 @@ $showPopularSubCategoryInMainSiteQueryResult=$validation->showPopularSubCategori
                         </td>
                         <td>
                             <a href="edit-category.php?id=<?php echo $showCategories['id']?>">Edit</a>
-                            <a href="?delete=true&id=<?php echo $showCategories['id']?>">Delete</a>
+                            <a href="?deletec=true&id=<?php echo $showCategories['id']?>">Delete</a>
                         </td>
                     </tr>
                 <?php }?>
